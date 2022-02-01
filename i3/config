@@ -1,7 +1,7 @@
 
 set $mod Mod4
 
-font pango:Jet Brains Mono 12
+font pango:JetBrains Mono 12
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
