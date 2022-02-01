@@ -6,10 +6,10 @@ font pango:JetBrains Mono 12
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
-exec --no-startup-id "dunst"
+exec_always --no-startup-id "dunst"
 exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
-exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
-exec --no-startup-id picom -d
+exec_always --no-startup-id syndaemon -i 0.5 -t -K -R -d &
+exec_always --no-startup-id picom -b
 
 bindsym Print exec --no-startup-id flameshot gui 
 
