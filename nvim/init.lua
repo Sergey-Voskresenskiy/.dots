@@ -2,6 +2,7 @@
 vim.wo.number = true
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])
+
 vim.opt.fillchars = { vert = ' ' }
 vim.opt.showtabline = 1
 vim.opt.scrolloff = 5
@@ -26,3 +27,4 @@ require('plugins')
 -- Other
 require('settings.color')
 require('settings.keymap')
+
