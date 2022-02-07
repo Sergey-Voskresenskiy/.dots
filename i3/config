@@ -166,8 +166,11 @@ bindsym $mod+r mode "resize"
 
 bar {
   status_command /usr/bin/bumblebee-status \
-  -m title layout datetime amixer brightness sensors battery dunst \
-  -p datetime.format="%d/%m | %H:%M" title.scroll="true" \
+  -m title layout spacer nic spacer datetime amixer brightness sensors battery dunst \
+  -p \
+    datetime.format="%d/%m | %H:%M" \
+    title.scroll="true" \
+    nic.format="{intf} {state} {ssid}" \
   -t gruvbox-powerline
 
   position top 
