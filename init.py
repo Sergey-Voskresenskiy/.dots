@@ -12,7 +12,6 @@ config_destinations = {
     'rofi': '~/.config/',
 }
 
-
 for config, path in config_destinations.items():
     system(f'rm -r {path}{config}')
     system(f'ln -s $PWD/{config} {path}{config}')
