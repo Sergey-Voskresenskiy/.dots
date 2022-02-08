@@ -11,4 +11,14 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require('packer').startup(function(use)
 	use {'ellisonleao/gruvbox.nvim'}	
+  use {
+    "folke/twilight.nvim",
+    config = function()
+      require("twilight").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 end)
