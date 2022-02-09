@@ -12,9 +12,9 @@ local opts = { noremap = true, silent = true }
 map('n', '<F3>', ':set relativenumber!<CR>', opts)
 map('n', '<F5>', ':Twilight<CR>', opts)
 
-map("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+--map("", "<Space>", "<Nop>", opts)
+--vim.g.mapleader = " "
+--vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
@@ -25,7 +25,7 @@ map("n", "<C-l>", "<C-w>l", opts)
 
 map("n", "<leader>e", ":Lex 30<cr>", opts)
 
-map('n', 'ge', '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', opts)
+map('n', 'g-e', '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', opts)
 map('n', '[g', '<cmd>lua vim.diagnostic.goto_prev({ float =  { border = "single" }})<CR>', opts)
 map('n', ']g', '<cmd>lua vim.diagnostic.goto_next({ float =  { border = "single" }})<CR>', opts)
 
