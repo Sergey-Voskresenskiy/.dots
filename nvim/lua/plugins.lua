@@ -38,13 +38,31 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
-	use "ellisonleao/gruvbox.nvim"	
+	use "ellisonleao/gruvbox.nvim"
+  use 'kyazdani42/nvim-web-devicons'
   use {
     "folke/twilight.nvim",
     config = function()
       require("twilight").setup {}
     end
   }
+  use {
+    "lewis6991/gitsigns.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim"
+    },
+    config = function()
+      require("gitsigns").setup()
+    end
+  }
+  use {
+    "phaazon/hop.nvim",
+    config = function ()
+      require("hop").setup()
+    end
+  }
+  use "ntpeters/vim-better-whitespace"
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -52,10 +70,18 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/nvim-compe"
 
   -- snippets
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

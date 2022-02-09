@@ -42,6 +42,8 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[set iskeyword+=-]]
 
 -- packer
 require('plugins')
@@ -51,5 +53,6 @@ require('settings.color')
 require('settings.keymap')
 require('settings.colorscheme')
 require ('settings.cmp')
+require ('lsp')
 
 -- vim.cmd("colorscheme default")
