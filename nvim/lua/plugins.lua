@@ -82,7 +82,6 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
-
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
