@@ -46,15 +46,6 @@ return packer.startup(function(use)
       require("twilight").setup {}
     end
   }
-  -- use {
-  --   "lewis6991/gitsigns.nvim",
-  --   requires = {
-  --     "nvim-lua/plenary.nvim"
-  --   },
-  --   config = function()
-  --     require("gitsigns").setup()
-  --   end
-  -- }
   use {
     "phaazon/hop.nvim",
     config = function ()
@@ -83,6 +74,7 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
