@@ -59,5 +59,6 @@ require('settings.treesitter')
 require('settings.autopairs')
 require('settings.comment')
 require('settings.gitsigns')
+require('settings.nvim-tree')
 
 -- vim.cmd("colorscheme default")

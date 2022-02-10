@@ -25,8 +25,8 @@ map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
-
-map("n", "<leader>e", ":Lex 30<cr>", opts)
+-- Nvimtree
+map("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 map('n', 'g-e', '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', opts)
 map('n', '[g', '<cmd>lua vim.diagnostic.goto_prev({ float =  { border = "single" }})<CR>', opts)

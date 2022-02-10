@@ -86,7 +86,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
+  use "nvim-telescope/telescope-media-files.nvim"
 
   -- Treesitter
   use {
@@ -95,10 +95,12 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  use "kyazdani42/nvim-tree.lua"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
