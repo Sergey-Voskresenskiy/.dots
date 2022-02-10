@@ -62,5 +62,6 @@ require('settings.gitsigns')
 require('settings.nvim-tree')
 require('settings.bufferline')
 require('settings.lualine')
+require('settings.project')
 
 -- vim.cmd("colorscheme default")

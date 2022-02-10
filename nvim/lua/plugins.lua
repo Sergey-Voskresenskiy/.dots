@@ -96,6 +96,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'
+  use "ahmedkhalf/project.nvim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
