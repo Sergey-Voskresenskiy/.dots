@@ -55,5 +55,7 @@ require('settings.colorscheme')
 require('settings.cmp')
 require('lsp')
 require('settings.telescope')
+require('settings.treesitter')
+require('settings.autopairs')
 
 -- vim.cmd("colorscheme default")

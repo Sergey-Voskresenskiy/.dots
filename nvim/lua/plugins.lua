@@ -63,6 +63,8 @@ return packer.startup(function(use)
   }
   use "ntpeters/vim-better-whitespace"
   use "lukas-reineke/indent-blankline.nvim"
+  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim" -- Easily comment stuff
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -85,6 +87,15 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground"
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
