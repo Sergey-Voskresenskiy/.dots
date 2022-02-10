@@ -60,5 +60,6 @@ require('settings.autopairs')
 require('settings.comment')
 require('settings.gitsigns')
 require('settings.nvim-tree')
+require('settings.bufferline')
 
 -- vim.cmd("colorscheme default")
