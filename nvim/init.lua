@@ -63,5 +63,6 @@ require('settings.nvim-tree')
 require('settings.bufferline')
 require('settings.lualine')
 require('settings.project')
+require('settings.alpha')
 
 -- vim.cmd("colorscheme default")

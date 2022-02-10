@@ -56,6 +56,8 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use 'goolord/alpha-nvim'
+  use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
