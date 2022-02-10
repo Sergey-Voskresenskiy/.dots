@@ -14,10 +14,7 @@ map('n', '<F5>', ':Twilight<CR>', opts)
 
 map('n', '<leader>f', "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 map("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
-
---map("", "<Space>", "<Nop>", opts)
---vim.g.mapleader = " "
---vim.g.maplocalleader = " "
+map("n", "<leader>,", ":Format<cr>", opts)
 
 -- Normal --
 -- Better window navigation
