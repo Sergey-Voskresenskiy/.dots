@@ -58,5 +58,6 @@ require('settings.telescope')
 require('settings.treesitter')
 require('settings.autopairs')
 require('settings.comment')
+require('settings.gitsigns')
 
 -- vim.cmd("colorscheme default")
