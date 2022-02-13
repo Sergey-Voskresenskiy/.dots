@@ -52,7 +52,14 @@ return packer.startup(function(use)
       require("hop").setup()
     end
   }
-  use "ntpeters/vim-better-whitespace"
+  use {
+    'johnfrankmorgan/whitespace.nvim',
+    config = function ()
+      require('whitespace-nvim').setup({
+        ignored_filetypes = { 'TelescopePrompt' },
+      })
+    end
+  }
   use {
     "lukas-reineke/indent-blankline.nvim",
     config = function ()
