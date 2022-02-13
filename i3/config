@@ -173,5 +173,10 @@ bar {
     nic.format="{intf} {state} {ssid}" \
   -t gruvbox-powerline
 
-  position top 
+  position top
+  colors {
+    background #1d2021
+    focused_workspace #282828 #3c3836 #fe8019
+    active_workspace #333333 #333333 #888888
+  } 
 }
