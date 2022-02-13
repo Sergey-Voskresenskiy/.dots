@@ -16,6 +16,9 @@ map('n', '<leader>f', "<cmd>lua require'telescope.builtin'.find_files(require('t
 map("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>,", ":Format<cr>", opts)
 
+-- Git
+map('n', '<leader>g', ':LazyGit<CR>', opts)
+
 -- Normal --
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h", opts)
