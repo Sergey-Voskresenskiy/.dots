@@ -38,7 +38,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
-	use "ellisonleao/gruvbox.nvim"
+	-- use "ellisonleao/gruvbox.nvim"
   use 'kyazdani42/nvim-web-devicons'
   use {
     "folke/twilight.nvim",
@@ -114,6 +114,16 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use 'nvim-lualine/lualine.nvim'
   use "ahmedkhalf/project.nvim"
+  use 'lewis6991/impatient.nvim'
+
+  use {
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    tag = 'v0.*',
+    config = function()
+        vim.cmd('colorscheme rose-pine')
+    end
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

@@ -35,7 +35,6 @@ local options = {
   sidescrolloff = 8
 }
 
-
 vim.opt.shortmess:append "c"
 
 for k, v in pairs(options) do
@@ -64,5 +63,31 @@ require('settings.bufferline')
 require('settings.lualine')
 require('settings.project')
 require('settings.alpha')
+require('settings.impatient')
 
 -- vim.cmd("colorscheme default")
+
+-- Kludge for Alacritty :fire: :fire:
+
+function Sad(line_nr, from, to, fname)
+  vim.cmd(string.format("silent !sed -i '%ss/%s/%s/' %s", line_nr, from, to, fname))
+end
+
+function IncreasePadding()
+  Sad('29', 0, 10, '~/.dots/alacritty/alacritty.yml')
+  Sad('30', 0, 10, '~/.dots/alacritty/alacritty.yml')
+end
+
+function DecreasePadding()
+  Sad('29', 10, 0, '~/.dots/alacritty/alacritty.yml')
+  Sad('30', 10, 0, '~/.dots/alacritty/alacritty.yml')
+end
+
+vim.cmd[[
+  augroup change_alacritty_padding
+    autocmd!
+    autocmd VimEnter * lua DecreasePadding()
+    autocmd VimLeavePre * lua IncreasePadding()
+  augroup end
+]]
+
