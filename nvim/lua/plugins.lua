@@ -53,7 +53,14 @@ return packer.startup(function(use)
     end
   }
   use "ntpeters/vim-better-whitespace"
-  use "lukas-reineke/indent-blankline.nvim"
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function ()
+      require("indent_blankline").setup({
+        filetype_exclude = {"alpha"}
+      })
+    end
+  }
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use 'goolord/alpha-nvim'
