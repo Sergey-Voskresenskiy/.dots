@@ -74,13 +74,13 @@ function Sad(line_nr, from, to, fname)
 end
 
 function IncreasePadding()
-  Sad('29', 0, 10, '~/.dots/alacritty/alacritty.yml')
-  Sad('30', 0, 10, '~/.dots/alacritty/alacritty.yml')
+  Sad('29', 0, 5, '~/.dots/alacritty/alacritty.yml')
+  Sad('30', 0, 5, '~/.dots/alacritty/alacritty.yml')
 end
 
 function DecreasePadding()
-  Sad('29', 10, 0, '~/.dots/alacritty/alacritty.yml')
-  Sad('30', 10, 0, '~/.dots/alacritty/alacritty.yml')
+  Sad('29', 5, 0, '~/.dots/alacritty/alacritty.yml')
+  Sad('30', 5, 0, '~/.dots/alacritty/alacritty.yml')
 end
 
 vim.cmd[[

@@ -43,6 +43,7 @@ local art = {
 
 dashboard.section.header.val = art;
 dashboard.section.header.opts.hl = "Include"
+
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
