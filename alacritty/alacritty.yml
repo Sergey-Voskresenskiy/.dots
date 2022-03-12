@@ -26,7 +26,7 @@ window:
     columns: 80
     lines: 24
   padding:
-    x: 5
+    x: 0
     y: 5
   decorations: none
 

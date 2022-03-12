@@ -180,9 +180,11 @@ set $darkgray #1d2021
 
 bar {
   status_command /usr/bin/bumblebee-status \
-  -m title layout spacer nic spacer datetime amixer brightness sensors battery dunst \
+  -m title layout spacer nic ping spacer datetime amixer brightness sensors battery dunst \
   -p \
     datetime.format="%d/%m | %H:%M" \
+    nic.left-click="pavucontrol" \
+    ping.address=google.com \
     title.scroll="true" \
     nic.format="{intf} {state} {ssid}" \
   -t gruvbox-powerline
