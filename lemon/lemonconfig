@@ -1,0 +1,17 @@
+#!/bin/bash
+
+trap 'Update' 5
+
+newModule() {
+  echo "%{F#eeeeee}%{+u} Hello wold %{-u}%{F}"
+}
+
+Update() {
+  echo -e "%{c} $(newModule)"
+}
+
+while true; do
+  Update
+  sleep 5s &
+  wait
+done
