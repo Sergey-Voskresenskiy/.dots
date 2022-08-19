@@ -1,5 +1,4 @@
 from os import system
-from sys import argv
 
 config_destinations = {
     'dunst': '~/.config/',
@@ -10,6 +9,7 @@ config_destinations = {
     'alacritty': '~/.config/',
     'feh': '~/.config/',
     'rofi': '~/.config/',
+    'polybar': '~/.config/'
 }
 
 for config, path in config_destinations.items():
