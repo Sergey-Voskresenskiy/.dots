@@ -52,12 +52,12 @@ require('settings.color')
 require('settings.keymap')
 require('settings.colorscheme')
 require('settings.cmp')
-require('lsp')
+--require('lsp')
 require('settings.telescope')
-require('settings.treesitter')
+--require('settings.treesitter')
 require('settings.autopairs')
 require('settings.comment')
-require('settings.gitsigns')
+--require('settings.gitsigns')
 require('settings.nvim-tree')
 require('settings.bufferline')
 require('settings.lualine')
@@ -68,7 +68,6 @@ require('settings.impatient')
 -- vim.cmd("colorscheme default")
 
 -- Kludge for Alacritty :fire: :fire:
-
 function Sad(line_nr, from, to, fname)
   vim.cmd(string.format("silent !sed -i '%ss/%s/%s/' %s", line_nr, from, to, fname))
 end
