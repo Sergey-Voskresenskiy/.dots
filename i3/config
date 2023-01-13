@@ -8,10 +8,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id "dunst"
 exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:alt_shift_toggle"
-#exec --no-startup-id setxkbmap us,ru -option 'grp:alt_shift_toggle'
 exec_always --no-startup-id syndaemon -i 0.5 -t -K -R -d &
 exec_always --no-startup-id picom -b
-# exec_always --no-startup-id npx serve -s -l 1334 ~/projects/home-page/dist/
 exec_always --no-startup-id feh --bg-scale  $HOME/Images/bg.jpg
 exec_always --no-startup-id sh ~/.config/polybar/main.sh
 
@@ -175,15 +173,15 @@ bindsym $mod+r mode "resize"
 #######
 
 # set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
+# set $bg #282828
+# set $red #cc241d
+# set $green #98971a
+# set $yellow #d79921
+# set $blue #458588
+# set $purple #b16286
+# set $aqua #689d68
+# set $gray #a89984
+# set $darkgray #1d2021
 
 #bar {
 #  status_command /usr/bin/bumblebee-status \

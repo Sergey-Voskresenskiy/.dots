@@ -1,14 +1,14 @@
 * {
-    bg: #191724;
-    cur: #26233a;
-    fgd: #e0def4;
+    bg: #faf4ed;
+    cur: #f2e9de;
+    fgd: #575279;
     cmt: #6e6a86;
-    cya: #9ccfd8;
-    grn: #31748f;
-    ora: #ebbcba;
-    pur: #c4a7e7;
-    red: #eb6f92;
-    yel: #f6c177;
+    cya: #56949f;
+    grn: #286983;
+    ora: #d7827e;
+    pur: #907aa9;
+    red: #b4637a;
+    yel: #ea9d34;
 
     font: "Cartograph CF 12";
 
