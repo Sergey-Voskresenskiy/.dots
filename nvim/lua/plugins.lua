@@ -45,6 +45,7 @@ return packer.startup(function(use)
         vim.cmd('colorscheme rose-pine')
     end
   })
+  use 'NvChad/nvim-colorizer.lua'
   use 'kyazdani42/nvim-web-devicons'
   use {
     "folke/twilight.nvim",
@@ -97,6 +98,17 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim"
+  use {
+    "folke/lsp-colors.nvim",
+    config = function ()
+      require("lsp-colors").setup({
+        Error = "#db4b4b",
+        Warning = "#e0af68",
+        Information = "#0db9d7",
+        Hint = "#10B981"
+      })
+    end
+  }
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"

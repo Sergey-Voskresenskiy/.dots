@@ -64,6 +64,7 @@ require('settings.lualine')
 require('settings.project')
 require('settings.alpha')
 require('settings.impatient')
+require('settings.colorizer')
 
 vim.cmd[[
   augroup change_alacritty_padding
