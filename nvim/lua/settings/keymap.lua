@@ -13,11 +13,16 @@ map('n', '<F3>', ':set relativenumber!<CR>', opts)
 map('n', '<F5>', ':Twilight<CR>', opts)
 
 map('n', '<leader>f', "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+map('n', '<leader>b', "<cmd>lua require'telescope.builtin'.buffers(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+map('n', '<leader>fh', "<cmd>lua require'telescope.builtin'.help_tags(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+
 map("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 map("n", "<leader>,", ":Format<cr>", opts)
 
 -- Git
 map('n', '<leader>g', ':LazyGit<CR>', opts)
+map('n', '<leader>fgs', "<cmd>lua require'telescope.builtin'.git_status(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+map('n', '<leader>fgb', "<cmd>lua require'telescope.builtin'.git_branches(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 
 -- Normal --
 -- Better window navigation
