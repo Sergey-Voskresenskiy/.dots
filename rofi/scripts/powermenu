@@ -1,13 +1,14 @@
 #! /bin/sh
 
-variants=$(printf "Shutdown\nRestart" | rofi -dmenu -i \
-  -font "JetBrainsMono:size=10;2" \
-  -p "Time to do this?" \
-  -selected-row 0 \
+uptime="`uptime -p | sed -e 's/up //g'`"
+
+variants=$(printf " Power Off\n Restart\n" | rofi -dmenu -i \
+  -theme-str '@import "rosepine_powermenu.rasi"' \
+	-mesg "Uptime: $uptime" \
 )
 
 case "$variants" in
-  "Shutdown") poweroff ;;
-  "Restart") reboot ;;
+	"  Power Off") poweroff ;;
+	"  Restart") reboot ;;
   *) exit 1 ;;
 esac

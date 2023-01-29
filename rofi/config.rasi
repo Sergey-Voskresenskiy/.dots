@@ -69,7 +69,7 @@
 }
 #element.selected.normal {
     background-color: @selected-background;
-    text-color:       @foreground;
+    text-color:       @yel;
 }
 #element.selected.urgent {
     background-color: @selected-urgent-background;
@@ -117,6 +117,7 @@
 #entry {
     spacing:    0;
     text-color: @foreground;
+    placeholder: "";
 }
 #prompt {
     spacing:    0;

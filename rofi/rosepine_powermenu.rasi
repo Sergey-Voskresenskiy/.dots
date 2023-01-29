@@ -1,0 +1,86 @@
+* {
+    bg: #191724;
+    cur: #26233a;
+    fgd: #e0def4;
+    cmt: #6e6a86;
+    cya: #9ccfd8;
+    grn: #31748f;
+    ora: #ebbcba;
+    pur: #c4a7e7;
+    red: #eb6f92;
+    yel: #f6c177;
+
+    font: "JetBrains Mono 11";
+
+    foreground: @cmt;
+    background: @bg;
+    active-background: @cur;
+    urgent-background: @red;
+
+    selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: @cur;
+}
+
+#inputbar {
+    enabled:  false;
+}
+
+#listview {
+    lines: 2;
+}
+
+#element {
+    enabled:            true;
+    border:             0;
+    padding:            4px 10px;
+    background-color:   @background;
+    text-color:         @foreground;
+}
+
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       @yel;
+}
+
+#mailbox {
+    enabled:            true;
+    padding:            0px 0 5px 0;
+    background-color:   @background;
+    text-color:         @foreground;
+    children:           ["message", "listview" ];
+}
+
+#message {
+    enabled:                     true;
+    margin:                      0px 0px 15px 0px;
+    padding:                     10px 10px 15px;
+    border:                      1px solid;
+    border-radius:               2px;
+  	border-color:                @foreground;
+    markup:                      true;
+    placeholder-markup:          true;
+    text-color:                  @foreground;
+}
+
+#textbox {
+    background-color:   @background;
+    text-color:         @foreground;
+    markup:             true;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+}
+
+#window {
+    background-color:           @background;
+    border:                     1;
+    border-radius:              5;
+    border-color:               @bordercolor;
+    padding:                    5 10;
+    location:                   north east;
+    width:                      320px;
+    x-offset:                   0px;
+    y-offset:                   28px;
+}
