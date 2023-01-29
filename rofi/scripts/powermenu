@@ -1,0 +1,13 @@
+#! /bin/sh
+
+variants=$(printf "Shutdown\nRestart" | rofi -dmenu -i \
+  -font "JetBrainsMono:size=10;2" \
+  -p "Time to do this?" \
+  -selected-row 0 \
+)
+
+case "$variants" in
+  "Shutdown") poweroff ;;
+  "Restart") reboot ;;
+  *) exit 1 ;;
+esac

@@ -10,26 +10,26 @@
     red: #eb6f92;
     yel: #f6c177;
 
-    font: "Cartograph CF 12";
+    font: "JetBrains Mono 11";
 
-    foreground: @fgd;
+    foreground: @cmt;
     background: @bg;
-    active-background: @grn;
+    active-background: @cur;
     urgent-background: @red;
 
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: @ora;
+    bordercolor: @cur;
 }
 
 #window {
     background-color: @background;
-    border:           3;
-    border-radius: 6;
-    border-color: @bordercolor;
-    padding:          5;
+    border:           1;
+    border-radius:    5;
+    border-color:     @bordercolor;
+    padding:          10;
 }
 #mainbox {
     border:  0;
@@ -45,15 +45,15 @@
 }
 #listview {
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       0px dash 0px 0px ;
     border-color: @bordercolor;
-    spacing:      2px ;
+    spacing:      5px ;
     scrollbar:    false;
     padding:      2px 0px 0px ;
 }
 #element {
     border:  0;
-    padding: 1px ;
+    padding: 6px 4px;
 }
 #element.normal.normal {
     background-color: @background;
@@ -92,7 +92,7 @@
     text-color:       @foreground;
 }
 #scrollbar {
-    width:        2px ;
+    width:        0px ;
     border:       0;
     handle-width: 8px ;
     padding:      0;
@@ -103,7 +103,7 @@
 }
 #button.selected {
     background-color: @selected-background;
-    text-color:       @foreground;
+    text-color:       @yel;
 }
 #inputbar {
     spacing:    0;
@@ -116,18 +116,18 @@
 }
 #entry {
     spacing:    0;
-    text-color: @cya;
+    text-color: @foreground;
 }
 #prompt {
     spacing:    0;
-    text-color: @grn;
+    text-color: @foreground;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ":";
+    str:        " ~> ";
     margin:     0px 0.3em 0em 0em ;
-    text-color: @grn;
+    text-color: @foreground;
 }
