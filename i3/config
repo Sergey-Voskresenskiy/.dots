@@ -5,11 +5,11 @@ font pango:JetBrains Mono 12
 
 exec --no-startup-id nm-applet
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id "dunst"
-exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:alt_shift_toggle"
 exec_always --no-startup-id syndaemon -i 0.5 -t -K -R -d &
-exec_always --no-startup-id picom -b
+exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:alt_shift_toggle"
+# exec_always --no-startup-id picom -b
 exec_always --no-startup-id feh --bg-scale $HOME/Images/bg.jpg
 exec_always --no-startup-id sh ~/.config/polybar/main.sh
 
