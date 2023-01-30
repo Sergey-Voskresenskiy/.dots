@@ -8,7 +8,7 @@ variants=$(printf " Power Off\n Restart\n" | rofi -dmenu -i \
 )
 
 case "$variants" in
-	"  Power Off") poweroff ;;
-	"  Restart") reboot ;;
+	" Power Off") poweroff ;;
+	" Restart") reboot ;;
   *) exit 1 ;;
 esac

@@ -43,6 +43,8 @@ bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+# kill process
+bindsym $mod+p exec sh ~/.dots/rofi/scripts/kill-process &
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -modi window,drun,run -show drun -sidebar-mode"

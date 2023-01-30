@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+LINES="-l 20"
+FONT="-fn JetBrains Mono 11"
+COLORS="-nb #1f1d2e -nf #e0def4 -sb #eb6f92 -sf #21202e"
+
+selected="$(ps -a -u $USER | \
+  rofi -dmenu -i -p "Type to search and select process to kill" \
+  $LINES $COLORS $FONT | \
+  awk '{print $1" "$4}' )";
+
+if [[ ! -z $selected ]]; then
+  answer="$(echo -e "Yes\nNo" | \
+    rofi -dmenu -i -p "$selected will be killed, are you sure?" \
+    -l 2 $COLORS $FONT )"
+
+  if [[ $answer == "Yes" ]]; then
+    selpid="$(awk '{print $1}' <<< $selected)";
+    kill -9 $selpid
+  fi
+fi
+
+exit 0
