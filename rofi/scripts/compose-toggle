@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+FONT="-fn JetBrains Mono 11"
+COLORS="-nb #1f1d2e -nf #e0def4 -sb #eb6f92 -sf #21202e"
+
+command=$(docker compose ls -a)
+lines=$(wc -l <<< $command)
+
+selected="$(echo "$command" | \
+  rofi -dmenu -i -selected-row 1 -p "Select compose to toggle: " \
+  -l $lines $FONT | \
+  awk '{print $1, $2, $3}' )";
+
+if [[ ! -z $selected ]]; then
+  answer="$(echo -e "Yes\nNo" | \
+    rofi -dmenu -i -p "$(awk '{print $1}'<<< $selected) will be toggle, are you sure?" \
+    -l 2 $FONT )"
+
+  path="$(awk '{print $3}' <<< $selected)";
+
+  if [[ $answer == "Yes" ]]; then
+    if [[ $(awk '{print $2}' <<< $selected) =~ (running\([[:digit:]]\)) ]]; then
+      docker compose -f $path stop
+    else
+      docker compose -f $path start
+    fi
+  fi
+fi
+
+exit 0
