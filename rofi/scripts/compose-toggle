@@ -7,13 +7,18 @@ command=$(docker compose ls -a)
 lines=$(wc -l <<< $command)
 
 selected="$(echo "$command" | \
-  rofi -dmenu -i -selected-row 1 -p "Select compose to toggle: " \
+  rofi -dmenu \
+  -i \
+  -selected-row 1 \
+  -p "Select compose to toggle: " \
   -l $lines $FONT | \
   awk '{print $1, $2, $3}' )";
 
 if [[ ! -z $selected ]]; then
   answer="$(echo -e "Yes\nNo" | \
-    rofi -dmenu -i -p "$(awk '{print $1}'<<< $selected) will be toggle, are you sure?" \
+    rofi -dmenu \
+    -i \
+    -p "$(awk '{print $1}'<<< $selected) will be toggle, are you sure?" \
     -l 2 $FONT )"
 
   path="$(awk '{print $3}' <<< $selected)";

@@ -5,7 +5,10 @@ FONT="-fn JetBrains Mono 11"
 COLORS="-nb #1f1d2e -nf #e0def4 -sb #eb6f92 -sf #21202e"
 
 selected="$(ps -a -u $USER | \
-  rofi -dmenu -i -p "Type to search and select process to kill" \
+  rofi -dmenu \
+  -i \
+  -p "Type to search and select process to kill" \
+  -selected-row 1 \
   $LINES $COLORS $FONT | \
   awk '{print $1" "$4}' )";
 
