@@ -10,7 +10,7 @@ exec_always --no-startup-id "dunst"
 exec_always --no-startup-id syndaemon -i 0.5 -t -K -R -d &
 exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:alt_shift_toggle"
 # exec_always --no-startup-id picom -b
-exec_always --no-startup-id feh --bg-scale $HOME/Images/bg.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Images/bg.png
 exec_always --no-startup-id sh ~/.config/polybar/main.sh
 
 bindsym XF86MonBrightnessUp exec light -A 5
@@ -205,7 +205,7 @@ client.focused_inactive #26233a #26233a #e0def4 #f6c177 #26233a
 #       background $bg
         # text color used for blocks that do not have a color specified.
 #        statusline $yellow
-        # workspaces section            
+        # workspaces section
         #                    border  backgr. text
 #        focused_workspace    $yellow $bg $yellow
 #        inactive_workspace   $darkgray $darkgray $gray
