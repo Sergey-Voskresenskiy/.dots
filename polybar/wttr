@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PLACE="Chernivtsi"
+
+command=$(curl -s "https://wttr.in/${PLACE}?format=3")
+
+echo ${command}

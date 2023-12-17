@@ -1,38 +1,38 @@
 # Colors
 colors:
   primary:
-    background: "#191724"
-    foreground: "#e0def4"
+    background: "#0f111b"
+    foreground: "#ecf0c1"
   cursor:
-    text: "#e0def4"
-    cursor: "#524f67"
+    text: "#ecf0c1"
+    cursor: "#16172d"
   vi_mode_cursor:
-    text: "#e0def4"
-    cursor: "#524f67"
+    text: "#ecf0c1"
+    cursor: "#16172d"
   line_indicator:
     foreground: none
     background: none
   selection:
-    text: "#e0def4"
-    background: "#403d52"
+    text: "#ecf0c1"
+    background: "#1b1c36"
   normal:
-    black: "#26233a"
-    red: "#eb6f92"
-    green: "#31748f"
-    yellow: "#f6c177"
-    blue: "#9ccfd8"
-    magenta: "#c4a7e7"
-    cyan: "#ebbcba"
-    white: "#e0def4"
+    black: "#30365F"
+    red: "#e33400"
+    green: "#5ccc96"
+    yellow: "#f2ce00"
+    blue: "#686f9a"
+    magenta: "#ce6f8f"
+    cyan: "#00a3cc"
+    white: "#ecf0c1"
   bright:
     black: "#6e6a86"
-    red: "#eb6f92"
-    green: "#31748f"
-    yellow: "#f6c177"
-    blue: "#9ccfd8"
-    magenta: "#c4a7e7"
-    cyan: "#ebbcba"
-    white: "#e0def4"
+    red: "#e33400"
+    green: "#5ccc96"
+    yellow: "#f2ce00"
+    blue: "#686f9a"
+    magenta: "#ce6f8f"
+    cyan: "#00a3cc"
+    white: "#ecf0c1"
   hints:
     start:
       foreground: "#908caa"
@@ -69,5 +69,3 @@ font:
   glyph_offset:
     x: 0
     y: 0
-
-
